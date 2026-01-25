@@ -1,0 +1,142 @@
+/* Step 2 & 3: Element Selector + Typography */
+body {
+    font-family: system-ui, Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Step 3: Typography - Different heading sizes */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+/* Step 3: Paragraph line height */
+p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Step 2: Group Selector + Step 5: Header & Footer styling */
+header,
+footer {
+    background-color: #f4f4f4;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+/* Step 4 & 8: Main content - spacing and layout constraint */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Step 4: Section spacing (margin vs padding) */
+section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Step 2: ID Selector (example for works section) */
+#works {
+    background-color: #fafafa;
+}
+
+/* Step 6: Navigation styling - remove bullets */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Step 6: Navigation - horizontal items */
+nav li {
+    display: inline-block;
+}
+
+/* Step 2: Descendant Selector + Step 6: Navigation links */
+nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Step 2: Pseudo-class selector */
+nav a:hover {
+    color: #3498db;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+}
+
+/* Step 2: Class Selector (example card class) */
+.card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Step 7: Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Additional styling for image containers */
+figure {
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.centered-figure {
+    margin: 0;
+    text-align: center;
+}
+
+.centered-figure img {
+    display: block;
+    margin: 0 auto;
+    /* centers the image within figure */
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    font-style: italic;
+    color: #666;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Footer specific styling */
+footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Links general styling */
+a {
+    color: #3498db;
+}
+
+a:visited {
+    color: #2980b9;
+}
