@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L04 — JavaScript Basics</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header class="container">
+        <h1>JavaScript Basics</h1>
+        <p class="subtitle">External JS with Theme Toggle & Click Counter</p>
+        <button id="btnTheme">Toggle Theme</button>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Feature 1: Theme Toggle</h2>
+            <p>Click the button in the header to switch between light and dark mode.</p>
+            <p id="themeStatus">Current theme: Light</p>
+        </section>
+
+        <section class="card">
+            <h2>Feature 2: Click Counter</h2>
+            <button id="btnCount">Click Me!</button>
+            <p id="counterDisplay">Button clicked: <strong>0</strong> times</p>
+        </section>
+
+        <section class="card">
+            <h2>About This Page</h2>
+            <p>This portfolio demonstrates basic JavaScript concepts including:</p>
+            <ul>
+                <li>Console logging for debugging</li>
+                <li>Variables (let and const)</li>
+                <li>Functions for code reusability</li>
+                <li>Event handlers for user interaction</li>
+                <li>State management</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>Browser Programming — Lecture 4</p>
+    </footer>
+
+    <!-- JS must be loaded at the end of body -->
+    <script src="script.js"></script>
+</body>
+
+</html>
