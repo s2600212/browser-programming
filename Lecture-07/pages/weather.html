@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App – Portfolio</title>
+    <link rel="stylesheet" href="../styles/weather.css">
+    <script src="../controllers/theme-init.js"></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <button id="theme-toggle" aria-label="Toggle dark mode">Toggle Theme</button>
+
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="top-nav" aria-label="Main navigation">
+            <a href="../index.html" class="back-link" aria-label="Back to portfolio home">
+                ← Back to Portfolio
+            </a>
+        </nav>
+        <h1>🌤 Weather App</h1>
+        <p>Live weather data from cities around the world, powered by the
+            <a href="https://open-meteo.com/" target="_blank" rel="external noopener noreferrer">Open-Meteo API<span class="sr-only">(opens in new tab)</span></a>.
+        </p>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- City Selection -->
+        <section class="city-selection" aria-labelledby="city-heading">
+            <h2 id="city-heading">Choose a City</h2>
+            <p>Select a city below to fetch the current weather conditions.</p>
+
+            <div class="city-buttons" role="group" aria-label="City selection buttons">
+                <button class="city-btn" id="btnKuopio" type="button">
+                    <span class="city-btn-icon" aria-hidden="true">🇫🇮</span>
+                    <span class="city-btn-label">Kuopio</span>
+                </button>
+                <button class="city-btn" id="btnHelsinki" type="button">
+                    <span class="city-btn-icon" aria-hidden="true">🇫🇮</span>
+                    <span class="city-btn-label">Helsinki</span>
+                </button>
+                <button class="city-btn" id="btnStockholm" type="button">
+                    <span class="city-btn-icon" aria-hidden="true">🇸🇪</span>
+                    <span class="city-btn-label">Stockholm</span>
+                </button>
+                <button class="city-btn" id="btnKarlsruhe" type="button">
+                    <span class="city-btn-icon" aria-hidden="true">🇩🇪</span>
+                    <span class="city-btn-label">Karlsruhe</span>
+                </button>
+                <button class="city-btn" id="btnLondon" type="button">
+                    <span class="city-btn-icon" aria-hidden="true">🇬🇧</span>
+                    <span class="city-btn-label">London</span>
+                </button>
+                <button class="city-btn" id="btnTokyo" type="button">
+                    <span class="city-btn-icon" aria-hidden="true">🇯🇵</span>
+                    <span class="city-btn-label">Tokyo</span>
+                </button>
+                <button class="city-btn" id="btnNewYork" type="button">
+                    <span class="city-btn-icon" aria-hidden="true">🇺🇸</span>
+                    <span class="city-btn-label">New York</span>
+                </button>
+                <button class="city-btn" id="btnCanberra" type="button">
+                    <span class="city-btn-icon" aria-hidden="true">🇦🇺</span>
+                    <span class="city-btn-label">Canberra</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Weather Result -->
+        <section class="weather-result" id="weatherBox" aria-labelledby="result-heading" aria-live="polite">
+            <h2 id="result-heading">Current Weather</h2>
+
+            <!-- Placeholder state -->
+            <div class="placeholder-state" id="placeholderState">
+                <p class="placeholder-icon" aria-hidden="true">🌍</p>
+                <p class="placeholder-text">Select a city above to see the weather.</p>
+            </div>
+
+            <!-- Loading state -->
+            <div class="loading-state" id="loadingState" hidden>
+                <div class="spinner" aria-hidden="true"></div>
+                <p>Fetching weather data…</p>
+            </div>
+
+            <!-- Error state -->
+            <div class="error-state" id="errorState" hidden>
+                <p class="error-icon" aria-hidden="true">⚠️</p>
+                <p class="error-message" id="errorMessage">Something went wrong.</p>
+                <button class="retry-btn" id="retryBtn" type="button">Try Again</button>
+            </div>
+
+            <!-- Data state -->
+            <div class="data-state" id="dataState" hidden>
+                <div class="weather-cards">
+                    <div class="weather-card weather-card--city">
+                        <p class="weather-card-label">City</p>
+                        <p class="weather-card-value" id="city">–</p>
+                    </div>
+                    <div class="weather-card weather-card--temp">
+                        <p class="weather-card-label">Temperature</p>
+                        <p class="weather-card-value weather-card-value--large" id="temperature">–</p>
+                    </div>
+                    <div class="weather-card weather-card--wind">
+                        <p class="weather-card-label">Wind Speed</p>
+                        <p class="weather-card-value" id="wind">–</p>
+                    </div>
+                </div>
+                <p class="last-fetched">Last updated: <time id="fetchTime">–</time></p>
+            </div>
+        </section>
+
+        <!-- Raw Output (for debugging / learning) -->
+        <details class="debug-section">
+            <summary>🔍 Raw API Output (Debug)</summary>
+            <pre id="output" aria-label="Raw API output log"></pre>
+        </details>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Part of my
+            <a href="../index.html">web development portfolio</a>.
+            Weather data provided by
+            <a href="https://open-meteo.com/" target="_blank" rel="external noopener noreferrer">Open-Meteo<span class="sr-only">(opens in new tab)</span></a>
+            (free, no API key required).
+        </p>
+    </footer>
+
+    <script src="../controllers/weather.js"></script>
+</body>
+
+</html>
