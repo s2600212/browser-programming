@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="exercise.css">
+</head>
+<body>
+
+    <h1>Weather Dashboard</h1>
+
+    <p>This page loads current weather data from a public API.</p>
+
+    <!-- Extension Task 1: Multiple city buttons -->
+    <div class="city-buttons">
+        <button id="btnKuopio">Kuopio</button>
+        <button id="btnHelsinki">Helsinki</button>
+        <button id="btnOulu">Oulu</button>
+    </div>
+
+    <div id="weatherBox">
+        <p><strong>City:</strong> <span id="city">-</span></p>
+        <p><strong>Temperature:</strong> <span id="temperature">-</span></p>
+        <p><strong>Wind Speed:</strong> <span id="wind">-</span></p>
+        <!-- Extension Task 2: Time of data -->
+        <p><strong>Time:</strong> <span id="time">-</span></p>
+    </div>
+
+    <pre id="output"></pre>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #f0f4f8;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Temperature-based background classes */
+body.cold {
+    background-color: #cce5ff;
+    color: #003366;
+}
+
+body.mild {
+    background-color: #fff3cd;
+    color: #664d03;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: inherit;
+}
+
+body > p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* City Selection Buttons */
+.city-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 24px;
+    font-size: 1rem;
+    border: 2px solid #0077b6;
+    background-color: #0077b6;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #005f8a;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button.active {
+    background-color: #023e58;
+    border-color: #023e58;
+}
+
+/* Weather Display Box */
+#weatherBox {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#weatherBox p {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#weatherBox p:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+#weatherBox span {
+    font-weight: normal;
+    color: #555;
+}
+
+/* Loading indicator */
+.loading span {
+    color: #999 !important;
+}
+
+/* Console Output Area */
+#output {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    padding: 16px;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    min-height: 60px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+}
+
+/* Error styling */
+.error-text {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    body {
+        padding: 12px;
+    }
+
+    .city-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
